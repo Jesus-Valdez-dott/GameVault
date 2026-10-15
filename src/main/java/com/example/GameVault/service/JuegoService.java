@@ -95,4 +95,14 @@ public class JuegoService {
         }
     }
 
+    // Método para buscar un juego en específico
+    public Juego obtenerJuegoPorId(Long id) {
+        return juegoRepository.findById(id).orElse(null);
+    }
+    // Método para eliminar un juego
+    public void eliminarJuego(Long id) {
+        juegoRepository.deleteById(id);
+    }
+
+
 }
